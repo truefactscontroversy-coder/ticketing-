@@ -11,6 +11,7 @@ def ticketing_system():
    break 
  voucher = []
  voucher.append ("date / time")
+ zone_count = []
  print("new page loading") 
  # need to have a way to send code back to start
 
@@ -21,26 +22,31 @@ def ticketing_system():
 
  printed_zones()
  print("Please select a starting zone: ") 
-
  your_location = input()
  
  def zone_check():
-    printed_zones()
-    print("Please select a vaild zone") 
-    location = input()
-    while location != "Down town zone" or location != "Mid town zone" or location != "Central zone":
-      printed_zones()
-      print("Please select a vaild zone") 
-      location = input()
+  location = input()
+  while location != "Down town zone" or location != "Mid town zone" or location != "Central zone":
       if location == "Down town zone" or location == "Mid town zone" or location == "Central zone":
-        voucher.append (F"Departure zone: {location}")
-        print("new page loading") 
-      break
+       voucher.append (F"Departure zone: {location}")
+       print("new page loading") 
+       zone_count.append(location)
+       break
+      else:
+       printed_zones()
+       print("Please select a vaild zone") 
+       location = input()
+       
+  
+
+    
  
  if your_location == "Down town zone" or your_location == "Mid town zone" or your_location == "Central zone":
   voucher.append (F"Departure zone: {your_location}")
   print("new page loading") 
  else: 
+    printed_zones()
+    print("Please select a vaild zone") 
     zone_check()
 
 
@@ -50,31 +56,51 @@ def ticketing_system():
  print("station board with all zones and stations")
  printed_zones()
  print("Please select a destinationn zone: ")
+
+
  destination_zone = input()
 
- 
+ def destination_zone_check():
+    location = input()
+    while location != "Down town zone" or location != "Mid town zone" or location != "Central zone":
+      if location == "Down town zone" or location == "Mid town zone" or location == "Central zone":
+        voucher.append (F"Destination zone: {location}")
+        zone_count.append(location)
+        break
+      else:
+       printed_zones()
+       print("Please select a vaild zone") 
+       location = input()
+      
 
  
- if destination_zone != "Down town zone" or destination_zone != "Mid town zone" or destination_zone != "Central zone":
-    zone_check()
+ if destination_zone == "Down town zone" or destination_zone == "Mid town zone" or destination_zone == "Central zone":
+     voucher.append (F"Destination zone: {destination_zone}")
+     print("new page loading") 
+     zone_count.append(destination_zone)
+ else:
+     printed_zones()
+     print("Please select a vaild zone") 
+     destination_zone_check()
+ 
+      
 
+ your_location = zone_count[0]
+ destination_zone = zone_count[1]
 
  if your_location == destination_zone:
-    zone_num = 1
-    voucher.append (f"Destination zone: {destination_zone}")
-    print("New page loading")
+       zone_num = 1
+       print("New page loading")
  elif your_location == "Down town zone" and destination_zone == "Central zone":
-    zone_num = 3
-    voucher.append (f"Destination zone: {destination_zone}")
-    print("New page loading")
+       zone_num = 3
+       print("New page loading")
  elif your_location == "Central zone" and destination_zone == "Down town zone":
-    zone_num = 3
-    voucher.append (f"Destination zone: {destination_zone}")
-    print("New page loading")
+       zone_num = 3
+       print("New page loading")
  elif your_location == "Mid town zone" :
-     zone_num = 2 
-     voucher.append (f"Destination zone: {destination_zone}")
-     print("New page loading")
+       zone_num = 2 
+       print("New page loading")
+ 
 
      
  # add destination station
