@@ -23,14 +23,17 @@ def ticketing_system():
  print("Please select a starting zone: ") 
 
  your_location = input()
-
+ 
  def zone_check():
-    while your_location != "Down town zone" or your_location != "Mid town zone" or your_location != "Central zone":
+    printed_zones()
+    print("Please select a vaild zone") 
+    location = input()
+    while location != "Down town zone" or location != "Mid town zone" or location != "Central zone":
       printed_zones()
       print("Please select a vaild zone") 
-      your_location = input()
-      if your_location == "Down town zone" or your_location == "Mid town zone" or your_location == "Central zone":
-        voucher.append (F"Departure zone: {your_location}")
+      location = input()
+      if location == "Down town zone" or location == "Mid town zone" or location == "Central zone":
+        voucher.append (F"Departure zone: {location}")
         print("new page loading") 
       break
  
@@ -38,9 +41,6 @@ def ticketing_system():
   voucher.append (F"Departure zone: {your_location}")
   print("new page loading") 
  else: 
-    printed_zones()
-    print("Please select a vaild zone") 
-    your_location = input()
     zone_check()
 
 
@@ -54,14 +54,10 @@ def ticketing_system():
 
  
 
- while destination_zone != "Down town zone" or destination_zone != "Mid town zone" or destination_zone != "Central zone":
-   printed_zones()
-   print("Please select a valid zone") 
-   destination_zone = input()
-   if destination_zone == "Down town zone" or destination_zone == "Mid town zone" or destination_zone == "Central zone":
-    break
-   
- zone_num = 0
+ 
+ if destination_zone != "Down town zone" or destination_zone != "Mid town zone" or destination_zone != "Central zone":
+    zone_check()
+
 
  if your_location == destination_zone:
     zone_num = 1
