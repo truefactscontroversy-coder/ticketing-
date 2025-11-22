@@ -9,7 +9,7 @@ def ticketing_system():
   if start_now == "start voucher":
    break 
  voucher = []
- 
+ voucher.append ("date / time")
  print("new page loading") 
  # need to have a way to send code back to start
  # add departure 
@@ -184,7 +184,10 @@ def ticketing_system():
     break
 
  # voucher print
- 
+ if zone_num == 1:
+  voucher.append ("Zones traveled through: None")
+ else: zone_num -= 1 
+ voucher.append (f"Zones traveled through: {zone_num}")
 
  print(voucher)
  
