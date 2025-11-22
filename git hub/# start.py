@@ -119,7 +119,10 @@ def ticketing_system():
  print("Elderly: -1 - +1 or none")
  Elderly = input()
 
- 
+ adult_num = Adult = int(Adult)
+ child_num = Child = int(Child)
+ student_num = Student = int(Student)
+ elderly_num = Elderly = int(Elderly)
 
  #passenger calculation
  # for adult there is something in the variable if there is a 0 nned to figure this out!!!
