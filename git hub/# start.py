@@ -232,9 +232,9 @@ def ticketing_system():
    restart_end = input()
    while restart_end != "start a new voucher" or restart_end != "end process":
     if restart_end == "end process":
-      for i in range (1):
+      for i in range (<1):
        print("new page loading")
-       i += 1
+       i -= 1
     elif restart_end == "start a new voucher": 
       ticketing_system()
     else:
@@ -247,7 +247,7 @@ def ticketing_system():
  elif restart_end == "end process":
       for i in range (1):
        print("new page loading")
-       i += 1
+       i -= 1
  elif restart_end == "start a new voucher": 
       ticketing_system()
  
