@@ -23,7 +23,7 @@ def ticketing_system():
  print("Please select a starting zone: ")
 
  
- your_location = input()
+ 
 
  while your_location != "Down town zone" or your_location != "Mid town zone" or your_location != "Central zone":
    printed_zones()
