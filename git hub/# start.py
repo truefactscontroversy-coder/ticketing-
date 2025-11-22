@@ -3,7 +3,7 @@ def ticketing_system():
  station_board = ("board + your location")
  start_now = input ("start voucher ")
 
- while start_now == "":
+ while start_now != "start voucher":
   print("please select: start voucher")
   start_now = input ("start voucher ")
   if start_now == "start voucher":
@@ -190,11 +190,11 @@ def ticketing_system():
  
  # restart or end 
  restart_end = input("Please select start a new voucher by selecting restart or end processs by selecting end process")
- while restart_end == "":
+ while restart_end != "start a new voucher" or restart_end != "end process":
    restart_end = input("Please select start a new voucher or end processs")
  if restart_end == "end process":
   print("new page loading")
- elif restart_end == "restart": 
+ elif restart_end == "start a new voucher": 
    ticketing_system()
 
 ticketing_system()
