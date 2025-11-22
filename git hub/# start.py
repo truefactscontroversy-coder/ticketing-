@@ -12,30 +12,28 @@ def ticketing_system():
  voucher.append ("date / time")
  print("new page loading") 
  # need to have a way to send code back to start
+
  # add departure 
  def printed_zones ():
   zones = ["Down town zone", "Mid town zone", "Central zone"]
   print(zones) 
+
  printed_zones()
  print("Please select a starting zone: ")
 
+ 
  your_location = input()
 
- select_zone = your_location
 
- while select_zone == "":
+ while your_location != "Down town zone" or your_location != "Mid town zone" or your_location != "Central zone":
    printed_zones()
-   print("Please select a zone") 
-   select_zone = input()
-   if select_zone != "":
-    your_location = select_zone
+   print("Please select a vaild zone") 
+   your_location = input()
+   if your_location == "Down town zone" or your_location == "Mid town zone" or your_location == "Central zone": 
     voucher.append (F"Departure zone: {your_location}")
-    print("New page loading")
+    print("new page loading") 
     break
-   else: 
-    voucher.append (F"Departure zone: {your_location}")
-    print("New page loading")
-    break
+ 
 
  # add destination  
  # problems not sure if the calculations are correct
@@ -55,7 +53,7 @@ def ticketing_system():
    
  
 
- if your_location == select_zone:
+ if your_location == destination_zone:
     zone_num = 1
     voucher.append (f"Destination zone: {destination_zone}")
     print("New page loading")
@@ -98,11 +96,12 @@ def ticketing_system():
   print("please select a station")
   destination_station = input()
   if destination_station != "":
+   voucher.append (f"destination station: {destination_station}")
    print("New page loading")
    break
 
- voucher.append (destination_station)
- select_zone = destination_station
+
+ 
 
  # add passenger 
  # problems can't add user input to an already defined variable?: fixed 
@@ -142,7 +141,6 @@ def ticketing_system():
   child_num *= 14.10
   child_num *= zone_num
   voucher.append (f"total Child cost: {child_num}")   
-  
  elif child_num == 0 :
   voucher.append(f"total Child cost: {0}")
 
@@ -152,7 +150,6 @@ def ticketing_system():
   student_num *= 17.50
   student_num *= zone_num
   voucher.append (f"total Student cost: {student_num}")
-  
  elif student_num == 0:
   voucher.append(f"total Student cost: {0}")
 
@@ -163,7 +160,6 @@ def ticketing_system():
   elderly_num *= 10.25
   elderly_num *= zone_num
   voucher.append (f"total Elderly cost: {elderly_num}")
-  
  elif elderly_num == 0 :
   voucher.append(f"total Elderly cost: {0}")
 
@@ -176,18 +172,21 @@ def ticketing_system():
  total_passenger = Adult + Child + Student + Elderly
  voucher.append (f"Total number of passengers: {total_passenger}")
 
+ print(zone_num)
+
  # if none have been selected
  while total_passenger == 0:
    print("please add passenger") 
-   if select_zone != "" :
+   if total_passenger != 0 :
     print("New page loading")
     break
 
  # voucher print
  if zone_num == 1:
-  voucher.append ("Zones traveled through: None")
- else: zone_num -= 1 
- voucher.append (f"Zones traveled through: {zone_num}")
+   voucher.append ("Zones traveled through: None")
+ elif zone_num != 1: 
+    zone_num -= 1 
+    voucher.append (f"Zones traveled through: {zone_num}")
 
  print(voucher)
  
