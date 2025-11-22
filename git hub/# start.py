@@ -25,7 +25,6 @@ def ticketing_system():
  your_location = input()
 
  def zone_check():
-    selected_zone = your_location
     while your_location != "Down town zone" or your_location != "Mid town zone" or your_location != "Central zone":
       printed_zones()
       print("Please select a vaild zone") 
@@ -38,7 +37,11 @@ def ticketing_system():
  if your_location == "Down town zone" or your_location == "Mid town zone" or your_location == "Central zone":
   voucher.append (F"Departure zone: {your_location}")
   print("new page loading") 
- else:zone_check()
+ else: 
+    printed_zones()
+    print("Please select a vaild zone") 
+    your_location = input()
+    zone_check()
 
 
 
