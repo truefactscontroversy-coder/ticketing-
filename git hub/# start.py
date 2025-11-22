@@ -237,7 +237,7 @@ print(voucher)
  # voucher print
  
 
- print(voucher)
+print(voucher)
  
 # restart or end 
  restart_end = input("Please select start a new voucher by selecting restart or end processs by selecting end process")
@@ -246,5 +246,5 @@ print(voucher)
  if restart_end == "end process":
   print("new page loading")
  elif restart_end == "restart": 
-  ticketing_system()
+
  
