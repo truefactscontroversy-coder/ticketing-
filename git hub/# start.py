@@ -43,6 +43,7 @@ def ticketing_system():
  
  if your_location == "Down town zone" or your_location == "Mid town zone" or your_location == "Central zone":
   voucher.append (F"Departure zone: {your_location}")
+  zone_count.append (your_location)
   print("new page loading") 
  else: 
     printed_zones()
