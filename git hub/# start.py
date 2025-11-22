@@ -178,5 +178,73 @@ print("Adult: -1 - +1 or none")
  
 print(voucher)
  
+#passenger calculation
+ # for adult there is something in the variable if there is a 0 nned to figure this out!!!
+ if adult_num != 0:
+  zone_num *= 21.05 
+  adult_num *= zone_num
+  voucher.append (f"total Adult cost: {adult_num}")
+ elif adult_num == 0:
+  voucher.append (f"total Adult cost: {0}")
+ 
+ 
+ # for child
+ if child_num != 0:
+  zone_num *= 14.10
+  child_num *= zone_num
+  voucher.append (f"total Child cost: {child_num}")   
+  
+ elif child_num == 0 :
+  voucher.append(f"total Child cost: {0}")
 
+
+ # for student
+ if student_num != 0:
+  zone_num *= 17.50
+  student_num *= zone_num
+  voucher.append (f"total Student cost: {student_num}")
+  
+ elif student_num == 0:
+  voucher.append(f"total Student cost: {0}")
+
+
+
+ # For elderly 
+ if elderly_num != 0:
+  zone_num *= 10.25
+  elderly_num *= zone_num
+  voucher.append (f"total Elderly cost: {elderly_num}")
+  
+ elif elderly_num == 0 :
+  voucher.append(f"total Elderly cost: {0}")
+
+
+ print(voucher[3])
+
+ total_cost = Adult + Child + Student + Elderly
+ voucher.append (f"Total cost of trip: {total_cost}")
+
+ total_passenger = Adult + Child + Student + Elderly
+ voucher.append (f"Total number of passengers: {total_passenger}")
+
+ # if none have been selected
+ while total_passenger == 0:
+   print("please add passenger") 
+   if select_zone != "" :
+    print("New page loading")
+    break
+
+ # voucher print
+ 
+
+ print(voucher)
+ 
+# restart or end 
+ restart_end = input("Please select start a new voucher by selecting restart or end processs by selecting end process")
+ while restart_end == "":
+   restart_end = input("Please select start a new voucher or end processs")
+ if restart_end == "end process":
+  print("new page loading")
+ elif restart_end == "restart": 
+  ticketing_system()
  
