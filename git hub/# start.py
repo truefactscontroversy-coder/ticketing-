@@ -24,16 +24,18 @@ def ticketing_system():
  
  your_location = input()
 
-
- while your_location != "Down town zone" or your_location != "Mid town zone" or your_location != "Central zone":
-   printed_zones()
-   print("Please select a vaild zone") 
-   your_location = input()
-   if your_location == "Down town zone" or your_location == "Mid town zone" or your_location == "Central zone": 
-    voucher.append (F"Departure zone: {your_location}")
-    print("new page loading") 
-    break
+ selected_zone = your_location
+ def zone_check():
+   while selected_zone != "Down town zone" or selected_zone != "Mid town zone" or selected_zone != "Central zone":
+    printed_zones()
+    print("Please select a vaild zone") 
+    selected_zone = input()
+    if selected_zone == "Down town zone" or selected_zone == "Mid town zone" or selected_zone == "Central zone": 
+     voucher.append (F"Departure zone: {selected_zone}")
+     print("new page loading") 
+     break
  
+ zone_check()
 
  # add destination  
  # problems not sure if the calculations are correct
