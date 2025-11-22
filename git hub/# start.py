@@ -106,7 +106,7 @@ def ticketing_system():
  # add passenger 
  # problems can't add user input to an already defined variable?: fixed 
  print("price page")
- print("age selction and add buttons")
+ print("catagory selction and add buttons")
 
 
  
@@ -124,7 +124,9 @@ def ticketing_system():
  student_num = Student = int(Student)
  elderly_num = Elderly = int(Elderly)
 
- #passenger calculation
+ 
+ 
+ #passenger calculation unit 
  # for adult there is something in the variable if there is a 0 need to figure this out!!!: fixed 
  if adult_num != 0:
   adult_num *= 21.05 
@@ -139,6 +141,7 @@ def ticketing_system():
   child_num *= 14.10
   child_num *= zone_num
   voucher.append (f"total Child cost: {child_num}")   
+  
  elif child_num == 0 :
   voucher.append(f"total Child cost: {0}")
 
@@ -148,6 +151,7 @@ def ticketing_system():
   student_num *= 17.50
   student_num *= zone_num
   voucher.append (f"total Student cost: {student_num}")
+  
  elif student_num == 0:
   voucher.append(f"total Student cost: {0}")
 
@@ -158,73 +162,14 @@ def ticketing_system():
   elderly_num *= 10.25
   elderly_num *= zone_num
   voucher.append (f"total Elderly cost: {elderly_num}")
- elif elderly_num == 0 :
-  voucher.append(f"total Elderly cost: {0}")
-
-
- print(voucher[3])
-
- total_cost = Adult + Child + Student + Elderly
- voucher.append (f"Total cost of trip: {total_cost}")
-
- total_passenger = Adult + Child + Student + Elderly
- voucher.append (f"Total number of passengers: {total_passenger}")
-
- # if none have been selected
- while total_passenger == 0:
-   print("please add passenger") 
-   if select_zone != "" :
-    print("New page loading")
-    break
-
- # voucher print
- 
- print(voucher)
- 
- #passenger calculation
- # for adult there is something in the variable if there is a 0 nned to figure this out!!!
- if adult_num != 0:
-  zone_num *= 21.05 
-  adult_num *= zone_num
-  voucher.append (f"total Adult cost: {adult_num}")
- elif adult_num == 0:
-  voucher.append (f"total Adult cost: {0}")
- 
- 
- # for child
- if child_num != 0:
-  zone_num *= 14.10
-  child_num *= zone_num
-  voucher.append (f"total Child cost: {child_num}")   
-  
- elif child_num == 0 :
-  voucher.append(f"total Child cost: {0}")
-
-
- # for student
- if student_num != 0:
-  zone_num *= 17.50
-  student_num *= zone_num
-  voucher.append (f"total Student cost: {student_num}")
-  
- elif student_num == 0:
-  voucher.append(f"total Student cost: {0}")
-
-
-
- # For elderly 
- if elderly_num != 0:
-  zone_num *= 10.25
-  elderly_num *= zone_num
-  voucher.append (f"total Elderly cost: {elderly_num}")
   
  elif elderly_num == 0 :
   voucher.append(f"total Elderly cost: {0}")
 
 
- print(voucher[3])
+ 
 
- total_cost = Adult + Child + Student + Elderly
+ total_cost = adult_num + child_num + student_num + elderly_num
  voucher.append (f"Total cost of trip: {total_cost}")
 
  total_passenger = Adult + Child + Student + Elderly
