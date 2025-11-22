@@ -50,7 +50,7 @@ def ticketing_system():
    if destination_zone == "Down town zone" or destination_zone == "Mid town zone" or destination_zone == "Central zone":
     break
    
- 
+ zone_num = 0
 
  if your_location == destination_zone:
     zone_num = 1
