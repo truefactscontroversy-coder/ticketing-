@@ -42,11 +42,11 @@ def ticketing_system():
 
  
 
- while destination_zone == "":
+ while destination_zone != "Down town zone" or your_location != "Mid town zone" or your_location != "Central zone":
    printed_zones()
-   print("Please select a zone") 
+   print("Please select a valid zone") 
    destination_zone = input()
-   if destination_zone != "" :
+   if destination_zone == "Down town zone" or your_location == "Mid town zone" or your_location == "Central zone":
     break
    
  
