@@ -102,5 +102,22 @@ destination_station = input()
 voucher.append (destination_station)
 select_zone = destination_station
 
+# add passenger 
+# problems can't add user input to an already defined variable?
+print("price page")
+print("age selction and add buttons")
+
+
+ 
+print("Adult: -1 - +1 or none")
+ Adult = input()
+ print("Child: -1 - +1 or none")
+ Child = input()
+ print("Student: -1 - +1 or none ")
+ Student = input()
+ print("Elderly: -1 - +1 or none")
+ Elderly = input()
+
+
   
  
