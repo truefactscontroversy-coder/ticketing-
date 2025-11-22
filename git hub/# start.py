@@ -205,7 +205,7 @@ def ticketing_system():
  total_passenger = Adult + Child + Student + Elderly
  voucher.append (f"Total number of passengers: {total_passenger}")
 
- print(zone_num)
+ 
 
  # if none have been selected
  while total_passenger == 0:
@@ -232,7 +232,9 @@ def ticketing_system():
    restart_end = input()
    while restart_end != "start a new voucher" or restart_end != "end process":
     if restart_end == "end process":
-      print("new page loading")
+      for i in range (1):
+       print("new page loading")
+       i += 1
     elif restart_end == "start a new voucher": 
       ticketing_system()
     else:
@@ -243,7 +245,9 @@ def ticketing_system():
    print("Type 'start a new voucher' to start a new voucher or 'end process' to end voucher process")
    restart_or_end()
  elif restart_end == "end process":
-      print("new page loading")
+      for i in range (1):
+       print("new page loading")
+       i += 1
  elif restart_end == "start a new voucher": 
       ticketing_system()
  
