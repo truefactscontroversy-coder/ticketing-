@@ -69,6 +69,38 @@ elif your_location == "Mid town zone" :
      zone_num = 2 
      voucher.append (f"Destination zone: {destination_zone}")
      print("New page loading")
+
      
+# add destination station
+
+down_town = ("Adohad, Brunad, Edert, Elyot, Erean, Holmer, Kelvia, Mareng, Perinad, Pryn, Ruril, Ryall, Zord")
+
+mid_town = ("Agraile, Docia, Garon, Obelyn, Oloadus, Quthiel, Ralith, Riciva, Riladia, Sylas, Wicyt")
+
+central = ("Centrala Frestin Jaund Lomil Ninia Rede Riciva Soth Sylyn Tallan")
+
+
+
+if destination_zone == "Down town zone":
+  print(f"List of stations for down town: {down_town}")
+ elif destination_zone == "Mid town zone":
+  print(f"List of stations for midtown: {mid_town}")
+ elif destination_zone == "Central zone":
+  print(f"List of stations for {central}")
+
+
+print("Please select a station: ")
+destination_station = input()
+
+ while destination_station == "":
+  print("please select a station")
+  destination_station = input()
+  if destination_station != "":
+   print("New page loading")
+   break
+
+voucher.append (destination_station)
+select_zone = destination_station
+
   
  
