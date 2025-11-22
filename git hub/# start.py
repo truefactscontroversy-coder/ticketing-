@@ -5,7 +5,7 @@ def ticketing_system():
 
  while start_now != "start voucher":
   print("please select: start voucher")
-  start_now = input ("start voucher ")
+  start_now = input ()
   if start_now == "start voucher":
    break 
  voucher = []
