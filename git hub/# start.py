@@ -104,7 +104,7 @@ def ticketing_system():
  select_zone = destination_station
 
  # add passenger 
- # problems can't add user input to an already defined variable?
+ # problems can't add user input to an already defined variable?: fixed 
  print("price page")
  print("age selction and add buttons")
 
@@ -125,9 +125,9 @@ def ticketing_system():
  elderly_num = Elderly = int(Elderly)
 
  #passenger calculation
- # for adult there is something in the variable if there is a 0 nned to figure this out!!!
+ # for adult there is something in the variable if there is a 0 need to figure this out!!!: fixed 
  if adult_num != 0:
-  zone_num *= 21.05 
+  adult_num *= 21.05 
   adult_num *= zone_num
   voucher.append (f"total Adult cost: {adult_num}")
  elif adult_num == 0:
@@ -136,20 +136,18 @@ def ticketing_system():
  
  # for child
  if child_num != 0:
-  zone_num *= 14.10
+  child_num *= 14.10
   child_num *= zone_num
   voucher.append (f"total Child cost: {child_num}")   
-  
  elif child_num == 0 :
   voucher.append(f"total Child cost: {0}")
 
 
  # for student
  if student_num != 0:
-  zone_num *= 17.50
+  student_num *= 17.50
   student_num *= zone_num
   voucher.append (f"total Student cost: {student_num}")
-  
  elif student_num == 0:
   voucher.append(f"total Student cost: {0}")
 
@@ -157,10 +155,9 @@ def ticketing_system():
 
  # For elderly 
  if elderly_num != 0:
-  zone_num *= 10.25
+  elderly_num *= 10.25
   elderly_num *= zone_num
   voucher.append (f"total Elderly cost: {elderly_num}")
-  
  elif elderly_num == 0 :
   voucher.append(f"total Elderly cost: {0}")
 
