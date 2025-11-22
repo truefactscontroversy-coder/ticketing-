@@ -9,7 +9,7 @@
    break 
  voucher = []
  
- print("new page loading") 
+print("new page loading") 
 # need to have a way to send code back to start
 # add departure 
 def printed_zones ():
