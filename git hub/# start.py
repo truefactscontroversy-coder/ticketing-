@@ -35,6 +35,7 @@ def ticketing_system():
    else: 
     voucher.append (F"Departure zone: {your_location}")
     print("New page loading")
+    break
 
  # add destination  
  # problems not sure if the calculations are correct
