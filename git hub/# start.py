@@ -145,8 +145,7 @@ def ticketing_system():
    "Ninia, Rede, Riciva, Soth, Sylyn, Tallan"
    )
 
- # display station list based on destination zone and
- # user input for destination station
+ # display station list based on destination zone 
 
  if destination_zone == "Down town zone":
   print(f"List of stations for down town: {DOWN_TOWN}")
@@ -154,25 +153,18 @@ def ticketing_system():
   print(f"List of stations for midtown: {MID_TOWN}")
  elif destination_zone == "Central zone":
   print(f"List of stations for {CENTRAL}")
- 
- print("Please select a station: ")
- destination_station = input()
 
- if destination_zone == "":
-  while destination_station == "":
-   if (destination_station == DOWN_TOWN or
-      destination_station == MID_TOWN or
-      destination_station == CENTRAL):
-    voucher.append (f"destination station: {destination_station}")
-    print("New page loading")
-    break
-   else:
-      print("please select a station")
-      destination_station = input()
- else: 
+ # user input for destination station
+  print("Please select a station: ")
+  destination_station = input()
+
+ while destination_station == "":
+  print("please select a station")
+  destination_station = input()
+  if destination_station != "":
    voucher.append (f"destination station: {destination_station}")
    print("New page loading")
-  
+   break
 
 
  
