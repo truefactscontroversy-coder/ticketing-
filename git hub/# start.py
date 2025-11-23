@@ -186,10 +186,19 @@ def ticketing_system():
  print("Elderly: -1 - +1 or none")
  Elderly = input()
  # conversion of user input to integers
- adult_num = Adult = int(Adult)
- child_num = Child = int(Child)
- student_num = Student = int(Student)
- elderly_num = Elderly = int(Elderly)
+ Adult = int(Adult)
+ Child = int(Child)
+ Student = int(Student)
+ Elderly = int(Elderly)
+
+ total_passenger = Adult + Child + Student + Elderly
+ voucher.append (f"Total number of passengers: {total_passenger}")
+
+ while total_passenger == 0:
+   print("please add passenger") 
+   if total_passenger != 0 :
+    print("New page loading")
+    break
 
  # end of add passenger unit
  
@@ -198,58 +207,51 @@ def ticketing_system():
  # 0 need to figure this out!!!: fixed) 
 
  # for adult
- if adult_num != 0:
-  adult_num *= 21.05 
-  adult_num *= zone_num
-  voucher.append (f"total Adult cost: {adult_num}")
- elif adult_num == 0:
+ if Adult != 0:
+  Adult *= 21.05 
+  Adult *= zone_num
+  voucher.append (f"total Adult cost: {Adult}")
+ elif Adult == 0:
   voucher.append (f"total Adult cost: {0}")
  
  
  # for child
- if child_num != 0:
-  child_num *= 14.10
-  child_num *= zone_num
-  voucher.append (f"total Child cost: {child_num}")   
- elif child_num == 0 :
+ if Child != 0:
+  Childhild *= 14.10
+  Child *= zone_num
+  voucher.append (f"total Child cost: {Child}")   
+ elif Child == 0 :
   voucher.append(f"total Child cost: {0}")
 
 
  # for student
- if student_num != 0:
-  student_num *= 17.50
-  student_num *= zone_num
-  voucher.append (f"total Student cost: {student_num}")
- elif student_num == 0:
+ if Student != 0:
+  Student *= 17.50
+  Student *= zone_num
+  voucher.append (f"total Student cost: {Student}")
+ elif Student == 0:
   voucher.append(f"total Student cost: {0}")
 
 
 
  # For elderly 
- if elderly_num != 0:
-  elderly_num *= 10.25
-  elderly_num *= zone_num
-  voucher.append (f"total Elderly cost: {elderly_num}")
- elif elderly_num == 0 :
+ if Elderly != 0:
+  Elderly *= 10.25
+  Elderly *= zone_num
+  voucher.append (f"total Elderly cost: {Elderly}")
+ elif Elderly == 0 :
   voucher.append(f"total Elderly cost: {0}")
 
 
- 
-
- total_cost = adult_num + child_num + student_num + elderly_num
+ total_cost = Adult + Child + Student + Elderly
  voucher.append (f"Total cost of trip: {total_cost}")
 
- total_passenger = Adult + Child + Student + Elderly
- voucher.append (f"Total number of passengers: {total_passenger}")
+ 
  # end of passenger calculation unit
  
  
  # error handling for passenger calculation unit: added 
- while total_passenger == 0:
-   print("please add passenger") 
-   if total_passenger != 0 :
-    print("New page loading")
-    break
+ 
 
  # start of voucher print unit
  # subtraction of zone to comply with required output
