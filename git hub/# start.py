@@ -194,14 +194,14 @@ def ticketing_system():
   print(f"List of stations for {CENTRAL}")
   print("Please select a station: ")
   destination_station = input()
-  if destination_station in MID_TOWN:
+  if destination_station in CENTRAL:
     voucher.append (f"destination station: {destination_station}")
     print("New page loading")
   else:
     print("please select a station")
     destination_station = input()
-    while (destination_station != MID_TOWN for destination_station in MID_TOWN):  
-      if destination_station in MID_TOWN:
+    while (destination_station != CENTRAL for destination_station in CENTRAL):  
+      if destination_station in CENTRAL:
         voucher.append (f"destination station: {destination_station}")
         print("New page loading")
         break
