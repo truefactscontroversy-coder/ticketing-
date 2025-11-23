@@ -332,6 +332,7 @@ def ticketing_system():
  elif restart_end == "start a new voucher": 
    ticketing_system()
  else:
+   print("Please select: 'start a new voucher' or 'end process'")
    restart_or_end()
    
  
