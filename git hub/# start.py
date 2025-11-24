@@ -4,12 +4,17 @@ def ticketing_system():
  print("Welcome to the ticketing " 
       "system please select: start voucher")
  start_now = input ()
+
  #error loop if user does not input correct code
- while start_now != "start voucher":
-  print("please select: start voucher")
-  start_now = input ()
-  if start_now == "start voucher":
-   break 
+ def start_voucher_check():
+  if start_now != "start voucher":
+   print("please select: start voucher")
+  else:
+    start_voucher_check()
+ 
+ if start_now != "start voucher":
+  start_voucher_check()
+
  # voucher list for travel details
  voucher = []
  voucher.append ("date / time")
@@ -32,18 +37,15 @@ def ticketing_system():
  
  #error handling function for departure zone
  def zone_check():
+   printed_zones()
+   print("Please select a vaild zone") 
    location = input()
-   while (location != "Down town zone" or 
-         location != "Mid town zone" or 
-         location != "Central zone"):
-       if (location == "Down town zone" or 
-          location == "Mid town zone" or 
-          location == "Central zone"): 
-         return location
-       else:
-         printed_zones()
-         print("Please select a vaild zone") 
-         location = input()
+   if (location == "Down town zone" or 
+       location == "Mid town zone" or 
+       location == "Central zone"): 
+       return location
+   else:
+      zone_check()
  
        
        
@@ -57,8 +59,6 @@ def ticketing_system():
   voucher.append (F"Departure zone: {your_location}")
   print("new page loading") 
  else: 
-    printed_zones()
-    print("Please select a vaild zone") 
     your_location = zone_check()
     voucher.append (F"Departure zone: {your_location}")
     print("new page loading")
@@ -87,8 +87,6 @@ def ticketing_system():
      voucher.append (F"Destination zone: {destination_zone}")
      print("new page loading") 
  else:
-     printed_zones()
-     print("Please select a vaild zone") 
      destination_zone = zone_check()
      voucher.append (F"Destination zone: {destination_zone}")
      print("new page loading")
@@ -315,31 +313,25 @@ def ticketing_system():
  
  # function for error handling of restart or end input
  def restart_or_end():
+   print("Please select: 'start a new voucher' or 'end process'")
    restart_end = input()
-   while (restart_end != "start a new voucher" or 
-          restart_end != "end process"):
-      if (restart_end == "start a new voucher" or 
+   if (restart_end == "start a new voucher" or 
           restart_end == "end process"):
-       restart_or_end_choice = restart_end
-       return restart_or_end_choice
-      else:
-        print("Please select: 'start a new voucher' or 'end process'")
-        restart_end = input()
+       return restart_end
+   else:
+        restart_or_end()
        
 
  print(
    "Type 'start a new voucher' to start a new voucher "
    "or 'end process' to end voucher process")
- restart_end = input()
- while (restart_end != "start a new voucher" or 
-        restart_end != "end process"):
-   if restart_end == "end process":
+ restart_end = restart_or_end()
+  
+ if restart_end == "end process":
        print("new page loading")
-   elif restart_end == "start a new voucher": 
+ elif restart_end == "start a new voucher": 
     ticketing_system()
- else:
-   print("Please select: 'start a new voucher' or 'end process'")
-   restart_end = restart_or_end()
+
    
  
 
