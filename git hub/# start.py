@@ -32,6 +32,7 @@ def ticketing_system():
  #error handling function for departure zone
  def zone_check():
    printed_zones()
+   location = input()
    print("Please select a vaild zone") 
    while (location != "Down town zone" or 
          location != "Mid town zone" or 
