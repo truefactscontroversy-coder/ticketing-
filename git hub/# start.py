@@ -9,8 +9,8 @@ def ticketing_system():
  def start_voucher_check():
   print("please select: start voucher")
   start_now = input ()
-  if start_now != "start voucher":
-   return
+  if start_now == "start voucher":
+   return 0
   else:
     start_voucher_check()
  
