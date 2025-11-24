@@ -31,23 +31,23 @@ def ticketing_system():
  
  #error handling function for departure zone
  def zone_check():
-  location = input()
   while (location != "Down town zone" or 
          location != "Mid town zone" or 
          location != "Central zone"):
-      if (location == "Down town zone" or 
-          location == "Mid town zone" or 
-          location == "Central zone"):
-       voucher.append (F"Departure zone: {location}")
-       print("new page loading") 
-       zone_counter.append(location)
-       break
-      else:
        printed_zones()
        print("Please select a vaild zone") 
        location = input()
+       if (location == "Down town zone" or 
+          location == "Mid town zone" or 
+          location == "Central zone"):
+         voucher.append (F"Departure zone: {location}")
+         print("new page loading") 
+         zone_counter.append(location)
+         return location
+ 
        
-  
+       
+ 
 
  # error handling statment for initial departure zone input
  
@@ -60,7 +60,7 @@ def ticketing_system():
  else: 
     printed_zones()
     print("Please select a vaild zone") 
-    zone_check()
+    your_location = zone_check()
  # end of add departure unit
 
 
