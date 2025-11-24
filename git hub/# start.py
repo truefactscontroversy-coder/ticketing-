@@ -234,11 +234,11 @@ def ticketing_system():
   total_passenger = Adult + Child + Student + Elderly
   return total_passenger
  
- passenger_catagory()
+ total_passenger = passenger_catagory()
 
- if (passenger_catagory() != 0) : 
+ if (total_passenger != 0) : 
   print("New page loading")
-  voucher.append (f"Total number of passengers: {passenger_catagory()}")
+  voucher.append (f"Total number of passengers: {total_passenger}")
  else:
    print("please add at least one passenger")
    while (passenger_catagory() == 0 ):
