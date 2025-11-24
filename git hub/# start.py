@@ -7,8 +7,10 @@ def ticketing_system():
 
  #error loop if user does not input correct code
  def start_voucher_check():
+  print("please select: start voucher")
+  start_now = input ()
   if start_now != "start voucher":
-   print("please select: start voucher")
+   return
   else:
     start_voucher_check()
  
