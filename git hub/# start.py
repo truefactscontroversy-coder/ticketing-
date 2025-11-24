@@ -13,7 +13,6 @@ def ticketing_system():
  # voucher list for travel details
  voucher = []
  voucher.append ("date / time")
- zone_counter = []
  print("new page loading") 
  # need to have a way to send code back to start: fixed
  # end of start unit
@@ -24,8 +23,10 @@ def ticketing_system():
   zones = ["Down town zone", "Mid town zone", "Central zone"]
   print(zones) 
 
- printed_zones()
+
  #initial user input for departure zone
+
+ printed_zones()
  print("Please select a starting zone: ") 
  your_location = input()
  
@@ -40,7 +41,6 @@ def ticketing_system():
           location == "Central zone"):
          voucher.append (F"Departure zone: {location}")
          print("new page loading") 
-         zone_counter.append(location)
          return location
        else:
          printed_zones()
@@ -57,13 +57,12 @@ def ticketing_system():
      your_location == "Mid town zone" or 
      your_location == "Central zone"):
   voucher.append (F"Departure zone: {your_location}")
-  zone_counter.append (your_location)
   print("new page loading") 
  else: 
     printed_zones()
     print("Please select a vaild zone") 
     your_location = zone_check()
-    
+
  # end of add departure unit
 
 
@@ -78,21 +77,7 @@ def ticketing_system():
 
  destination_zone = input()
  # error handling function for destination zone
- def destination_zone_check():
-    current_or_desired_location = input()
-    while (current_or_desired_location != "Down town zone" or 
-           current_or_desired_location != "Mid town zone" or 
-           current_or_desired_location != "Central zone"):
-      if (current_or_desired_location == "Down town zone" or 
-          current_or_desired_location == "Mid town zone" or 
-          current_or_desired_location == "Central zone"):
-        voucher.append (F"Destination zone: {current_or_desired_location}")
-        zone_counter.append(current_or_desired_location)
-        break
-      else:
-       printed_zones()
-       print("Please select a vaild zone") 
-       current_or_desired_location = input()
+ 
       
  # error handling statment for initial destination zone input
  
@@ -101,16 +86,14 @@ def ticketing_system():
      destination_zone == "Central zone"):
      voucher.append (F"Destination zone: {destination_zone}")
      print("new page loading") 
-     zone_counter.append(destination_zone)
  else:
      printed_zones()
      print("Please select a vaild zone") 
-     destination_zone_check()
+     destination_zone = zone_check()
  
   # calculation of zones traveled through    
  
- your_location = zone_counter[0]
- destination_zone = zone_counter[1]
+ 
 
  if your_location == destination_zone:
        zone_num = 1
