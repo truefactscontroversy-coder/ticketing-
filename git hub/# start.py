@@ -148,7 +148,7 @@ def ticketing_system():
  # display station list based on destination zone 
 
 
- #error handling system for downtown
+ #error handling system for if downtown is selected
  if destination_zone == "Down town zone":
   print(f"List of stations for down town: {DOWN_TOWN}")
   print("Please select a station: ")
@@ -169,7 +169,7 @@ def ticketing_system():
          destination_station = input()
   
 
- # error handling system for mid town
+ # error handling system for if mid town is selected
  if destination_zone == "Mid town zone":
   print(f"List of stations for midtown: {MID_TOWN}")
   print("Please select a station: ")
@@ -189,7 +189,7 @@ def ticketing_system():
          print("Please select a station: ")
          destination_station = input()
 
- # error handling for central
+ # error handling for if central is selected
  if destination_zone == "Central zone":
   print(f"List of stations for {CENTRAL}")
   print("Please select a station: ")
@@ -222,28 +222,49 @@ def ticketing_system():
 
 
  # user input for passenger catagory
- print("Adult: -1 - +1 or none")
- Adult = input()
- print("Child: -1 - +1 or none")
- Child = input()
- print("Student: -1 - +1 or none ")
- Student = input()
- print("Elderly: -1 - +1 or none")
- Elderly = input()
- # conversion of user input to integers
- Adult = int(Adult)
- Child = int(Child)
- Student = int(Student)
- Elderly = int(Elderly)
-
- total_passenger = Adult + Child + Student + Elderly
+ def passenger_catagory(total_passenger):
+  print("Adult : -1 - +1 ")
+  Adult = input()
+  print("Child: -1 - +1 ")
+  Child = input()
+  print("Student: -1 - +1 ")
+  Student = input()
+  print("Elderly: -1 - +1 ")
+  Elderly = input()
+  # conversion of user input to integers
+  Adult = int(Adult)
+  Child = int(Child)
+  Student = int(Student)
+  Elderly = int(Elderly)
+  total_passenger = Adult + Child + Student + Elderly
+  return total_passenger
+ 
+ passenger_catagory()
  voucher.append (f"Total number of passengers: {total_passenger}")
 
- while total_passenger == 0:
-   print("please add passenger") 
+ if total_passenger != 0 : 
+  print("New page loading")
+  voucher.append (f"Total number of passengers: {total_passenger}")
+ else:
+   while total_passenger != 0:
+    print("please add passenger") 
+    print("Adult : -1 - +1 ")
+    Adult = input()
+    print("Child: -1 - +1 ")
+    Child = input()
+    print("Student: -1 - +1 ")
+    Student = input()
+    print("Elderly: -1 - +1 ")
+    Elderly = input()
+    Adult = int(Adult)
+    Child = int(Child)
+    Student = int(Student)
+    Elderly = int(Elderly)
+    total_passenger = Adult + Child + Student + Elderly
    if total_passenger != 0 :
     print("New page loading")
-    break
+    voucher.append (f"Total number of passengers: {total_passenger}")
+   break
 
  # end of add passenger unit
  
