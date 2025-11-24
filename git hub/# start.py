@@ -38,9 +38,7 @@ def ticketing_system():
          location != "Central zone"):
        if (location == "Down town zone" or 
           location == "Mid town zone" or 
-          location == "Central zone"):
-         voucher.append (F"Departure zone: {location}")
-         print("new page loading") 
+          location == "Central zone"): 
          return location
        else:
          printed_zones()
@@ -62,6 +60,8 @@ def ticketing_system():
     printed_zones()
     print("Please select a vaild zone") 
     your_location = zone_check()
+    voucher.append (F"Departure zone: {your_location}")
+    print("new page loading")
 
  # end of add departure unit
 
@@ -90,6 +90,8 @@ def ticketing_system():
      printed_zones()
      print("Please select a vaild zone") 
      destination_zone = zone_check()
+     voucher.append (F"Departure zone: {destination_zone}")
+     print("new page loading")
  
   # calculation of zones traveled through    
  
@@ -294,8 +296,6 @@ def ticketing_system():
 
  
  # end of passenger calculation unit
- 
- 
  # error handling for passenger calculation unit: added 
  
 
