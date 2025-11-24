@@ -90,7 +90,7 @@ def ticketing_system():
      printed_zones()
      print("Please select a vaild zone") 
      destination_zone = zone_check()
-     voucher.append (F"Departure zone: {destination_zone}")
+     voucher.append (F"Destination zone: {destination_zone}")
      print("new page loading")
  
   # calculation of zones traveled through    
