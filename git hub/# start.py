@@ -222,49 +222,32 @@ def ticketing_system():
 
 
  # user input for passenger catagory
- def passenger_catagory(total_passenger):
+ def passenger_catagory():
   print("Adult : -1 - +1 ")
-  Adult = input()
+  Adult = int(input())
   print("Child: -1 - +1 ")
-  Child = input()
+  Child = int(input())
   print("Student: -1 - +1 ")
-  Student = input()
+  Student = int(input())
   print("Elderly: -1 - +1 ")
-  Elderly = input()
-  # conversion of user input to integers
-  Adult = int(Adult)
-  Child = int(Child)
-  Student = int(Student)
-  Elderly = int(Elderly)
+  Elderly = int(input())
   total_passenger = Adult + Child + Student + Elderly
   return total_passenger
  
  passenger_catagory()
- voucher.append (f"Total number of passengers: {total_passenger}")
 
- if total_passenger != 0 : 
+ if (passenger_catagory() != 0) : 
   print("New page loading")
-  voucher.append (f"Total number of passengers: {total_passenger}")
+  voucher.append (f"Total number of passengers: {passenger_catagory()}")
  else:
-   while total_passenger != 0:
-    print("please add passenger") 
-    print("Adult : -1 - +1 ")
-    Adult = input()
-    print("Child: -1 - +1 ")
-    Child = input()
-    print("Student: -1 - +1 ")
-    Student = input()
-    print("Elderly: -1 - +1 ")
-    Elderly = input()
-    Adult = int(Adult)
-    Child = int(Child)
-    Student = int(Student)
-    Elderly = int(Elderly)
-    total_passenger = Adult + Child + Student + Elderly
-   if total_passenger != 0 :
-    print("New page loading")
-    voucher.append (f"Total number of passengers: {total_passenger}")
-   break
+   while (passenger_catagory() == 0 ):
+    if (passenger_catagory() != 0) :
+     print("New page loading")
+     voucher.append (f"Total number of passengers: {passenger_catagory()}")
+    break
+   else:
+     print("please add at least one passenger")
+     passenger_catagory()
 
  # end of add passenger unit
  
