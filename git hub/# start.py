@@ -249,6 +249,7 @@ def ticketing_system():
   print("New page loading")
   voucher.append (f"Total number of passengers: {total_passenger}")
  while total_passenger == 0:
+  print("please add at least one passenger")
   Adult = passenger_catagory_adult()
   Child = passenger_catagory_child()
   Student = passenger_catagory_student()
@@ -257,12 +258,7 @@ def ticketing_system():
  if (total_passenger != 0): 
   print("New page loading")
   voucher.append (f"Total number of passengers: {total_passenger}")
- else:
-   print("please add at least one passenger")
-   
-
-
- total_passenger = Adult + Child + Student + Elderly
+ 
 
  # end of add passenger unit
  
