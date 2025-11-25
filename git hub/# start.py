@@ -207,9 +207,9 @@ def ticketing_system():
  # start of add passenger unit
  # problems can't add user input to an already defined variable?: fixed 
  # initial message to user
- print("cost of one zone is automatically added to total cost "
-       "cost will double for two zones and triple for three zones " 
-       "catagory selction and add buttons")
+ print("cost of one zone is automatically added to total cost")
+ print ("cost will double for two zones and triple for three zones")
+ print("catagory selction and add buttons")
  
  print("price page")
  print("Adult: $21.05 per zone")
