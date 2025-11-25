@@ -73,17 +73,17 @@ def ticketing_system():
 
  # station lists for each zone
  DOWN_TOWN = (
-   "Adohad, Brunad, Edert, Elyot, Erean," 
+   "Adohad, Brunad, Edert, Elyot, Erean, " 
    "Holmer, Kelvia, Mareng, Perinad, Pryn, Ruril, Ryall, Zord"
    )
 
  MID_TOWN = (
-   "Agraile, Docia, Garon, Obelyn, Oloadus,"
+   "Agraile, Docia, Garon, Obelyn, Oloadus, "
    "Quthiel, Ralith, Riciva, Riladia, Sylas, Wicyt"
    )
 
  CENTRAL = (
-   "Centrala, Frestin, Jaund, Lomil,"
+   "Centrala, Frestin, Jaund, Lomil, "
    "Ninia, Rede, Riciva, Soth, Sylyn, Tallan"
    )
 
