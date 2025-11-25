@@ -91,7 +91,6 @@ def ticketing_system():
  else:
      destination_zone = zone_check()
      voucher.append (F"Destination zone: {destination_zone}")
-     print("new page loading")
  
   # calculation of zones traveled through    
  
