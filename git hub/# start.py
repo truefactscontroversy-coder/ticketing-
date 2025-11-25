@@ -339,8 +339,6 @@ def ticketing_system():
    "or 'end process' to end voucher process")
  restart_end = restart_or_end()
 
- print(restart_end)
-
  if restart_end == "end process":
   print("new page loading")
  elif restart_end == "start a new voucher": 
