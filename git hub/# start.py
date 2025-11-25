@@ -27,8 +27,8 @@ def ticketing_system():
  # start of add departure unit 
  # function to repeatedly print zones
  def printed_zones():
-  zones = ["Down town zone", "Mid town zone", "Central zone"]
-  print(zones) 
+  ZONES = ["Down town zone", "Mid town zone", "Central zone"]
+  print(ZONES) 
 
 
  #initial user input for departure zone
