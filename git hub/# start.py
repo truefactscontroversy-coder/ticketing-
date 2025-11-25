@@ -3,12 +3,12 @@ def ticketing_system():
  # message to user
  print("Welcome to the ticketing " 
       "system please select: start voucher")
- start_now = input ()
+ start_now = input()
 
  #error loop if user does not input correct code
  def start_voucher_check():
   print("please select: start voucher")
-  start_now = input ()
+  start_now = input()
   if start_now == "start voucher":
    return 0
   else:
@@ -26,7 +26,7 @@ def ticketing_system():
 
  # start of add departure unit 
  # function to repeatedly print zones
- def printed_zones ():
+ def printed_zones():
   zones = ["Down town zone", "Mid town zone", "Central zone"]
   print(zones) 
 
@@ -58,7 +58,7 @@ def ticketing_system():
  if (your_location == "Down town zone" or 
      your_location == "Mid town zone" or 
      your_location == "Central zone"):
-  voucher.append (F"Departure zone: {your_location}")
+  voucher.append(F"Departure zone: {your_location}")
   print("new page loading") 
  else: 
     your_location = zone_check()
@@ -105,10 +105,10 @@ def ticketing_system():
  if (destination_zone == "Down town zone" or 
      destination_zone == "Mid town zone" or 
      destination_zone == "Central zone"):
-     voucher.append (F"Destination zone: {destination_zone}") 
+     voucher.append(F"Destination zone: {destination_zone}") 
  else:
      destination_zone = zone_check()
-     voucher.append (F"Destination zone: {destination_zone}")
+     voucher.append(F"Destination zone: {destination_zone}")
  
   # calculation of zones traveled through    
  
@@ -155,7 +155,7 @@ def ticketing_system():
         print("New page loading")
         break
       else:
-         print("Please select a station: ")
+         print("Please select a station:")
          destination_station = input()
   
 
@@ -165,18 +165,18 @@ def ticketing_system():
   print("Please select a station: ")
   destination_station = input()
   if destination_station in MID_TOWN:
-    voucher.append (f"destination station: {destination_station}")
+    voucher.append(f"destination station: {destination_station}")
     print("New page loading")
   else:
     print("please select a station")
     destination_station = input()
     while (destination_station != MID_TOWN for destination_station in MID_TOWN):  
       if destination_station in MID_TOWN:
-        voucher.append (f"destination station: {destination_station}")
+        voucher.append(f"destination station: {destination_station}")
         print("New page loading")
         break
       else:
-         print("Please select a station: ")
+         print("Please select a station:")
          destination_station = input()
 
  # error handling for if central is selected
@@ -185,18 +185,18 @@ def ticketing_system():
   print("Please select a station: ")
   destination_station = input()
   if destination_station in CENTRAL:
-    voucher.append (f"destination station: {destination_station}")
+    voucher.append(f"destination station: {destination_station}")
     print("New page loading")
   else:
     print("please select a station")
     destination_station = input()
     while (destination_station != CENTRAL for destination_station in CENTRAL):  
       if destination_station in CENTRAL:
-        voucher.append (f"destination station: {destination_station}")
+        voucher.append(f"destination station: {destination_station}")
         print("New page loading")
         break
       else:
-         print("Please select a station: ")
+         print("Please select a station:")
          destination_station = input()
 
  
@@ -254,7 +254,7 @@ def ticketing_system():
   total_passenger = Adult + Child + Student + Elderly
  if (total_passenger != 0): 
   print("New page loading")
-  voucher.append (f"Total number of passengers: {total_passenger}")
+  voucher.append(f"Total number of passengers: {total_passenger}")
  
 
  # end of add passenger unit
