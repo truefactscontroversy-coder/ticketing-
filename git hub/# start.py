@@ -154,10 +154,8 @@ def ticketing_system():
        next_step()
  
  #end of add destination unit
- print(voucher)
+
  # start of add destination station unit
-
-
 
  # display station list based on destination zone 
 
@@ -223,12 +221,11 @@ def ticketing_system():
          print("Please select a station:")
          destination_station = input()
 
- 
-
- print(voucher)
+ # end of add destination station unit
  
 
  # start of add passenger unit
+
  # problems can't add user input to an already defined variable?: fixed 
  # initial message to user
  print("cost of one zone is automatically added to total cost")
@@ -267,18 +264,28 @@ def ticketing_system():
  total_passenger = Adult + Child + Student + Elderly
 
  if (total_passenger != 0): 
-  next_step()
   voucher.append (f"Total number of passengers: {total_passenger}")
- while total_passenger == 0:
-  print("please add at least one passenger")
-  Adult = passenger_catagory_adult()
-  Child = passenger_catagory_child()
-  Student = passenger_catagory_student()
-  Elderly = passenger_catagory_elderly()
-  total_passenger = Adult + Child + Student + Elderly
- if (total_passenger != 0): 
   next_step()
-  voucher.append(f"Total number of passengers: {total_passenger}")
+ else: 
+   print("please add at least one passenger")
+   Adult = passenger_catagory_adult()
+   Child = passenger_catagory_child()
+   Student = passenger_catagory_student()
+   Elderly = passenger_catagory_elderly()
+   total_passenger = Adult + Child + Student + Elderly
+   while total_passenger == 0:
+    if (total_passenger != 0): 
+     voucher.append(f"Total number of passengers: {total_passenger}")
+     next_step()
+     break
+    else:
+     print("please add at least one passenger")
+     Adult = passenger_catagory_adult()
+     Child = passenger_catagory_child()
+     Student = passenger_catagory_student()
+     Elderly = passenger_catagory_elderly()
+     total_passenger = Adult + Child + Student + Elderly
+  
  
 
  # end of add passenger unit
