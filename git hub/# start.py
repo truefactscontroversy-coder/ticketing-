@@ -71,7 +71,7 @@ def ticketing_system():
        else:
          printed_zones()
          print("Please select a vaild zone") 
-         destination_zone = input()
+         your_location = input()
  
     
 
