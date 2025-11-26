@@ -53,20 +53,28 @@ def ticketing_system():
  
        
        
- 
+ def next_step():
+    print("please select: next")
+    please_select = input()
+    if please_select == "next":
+      print("New page loading") 
+    else:
+      return next_step()
 
  # error handling statment for initial departure zone input
  
  if (your_location == "Down town zone" or 
      your_location == "Mid town zone" or 
      your_location == "Central zone"):
-  voucher.append(F"Departure zone: {your_location}")
-  print("new page loading") 
+     voucher.append(F"Departure zone: {your_location}")
+     next_step()
+     print("New page loading") 
  else: 
     zone_check()
     print(zone_check)
     voucher.append (F"Departure zone: {your_location}")
-    print("New page loading")
+    print("please select: next")
+    next_step()
 
  # end of add departure unit
 
@@ -346,6 +354,7 @@ def ticketing_system():
 
  if restart_end == "end process":
   print("new page loading")
+  print("Thank you for using the ticketing system")
  elif restart_end == "start a new voucher": 
   ticketing_system()
 
