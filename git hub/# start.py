@@ -83,26 +83,26 @@ def ticketing_system():
  # problems not sure if the calculations are correct: fixed 
 
  # station lists for each zone
- DOWN_TOWN = (
+ DOWN_TOWN_STATION = (
    "Adohad, Brunad, Edert, Elyot, Erean, " 
    "Holmer, Kelvia, Mareng, Perinad, Pryn, Ruril, Ryall, Zord"
    )
 
- MID_TOWN = (
+ MID_TOWN_STATION = (
    "Agraile, Docia, Garon, Obelyn, Oloadus, "
    "Quthiel, Ralith, Riciva, Riladia, Sylas, Wicyt"
    )
 
- CENTRAL = (
+ CENTRAL_STATION = (
    "Centrala, Frestin, Jaund, Lomil, "
    "Ninia, Rede, Riciva, Soth, Sylyn, Tallan"
    )
 
  # initial user input for destination zone
  print("station board with all zones and stations")
- print(f"Down town zone stations: {DOWN_TOWN}")
- print(f"Mid town zone stations: {MID_TOWN}")
- print(f"Central zone stations: {CENTRAL}")
+ print(f"Down town zone stations: {DOWN_TOWN_STATION}")
+ print(f"Mid town zone stations: {MID_TOWN_STATION}")
+ print(f"Central zone stations: {CENTRAL_STATION}")
  printed_zones()
  print("Please select a destinationn zone: ")
 
@@ -162,17 +162,17 @@ def ticketing_system():
 
  #error handling system for if downtown is selected
  if destination_zone == "Down town zone":
-  print(f"List of stations for down town: {DOWN_TOWN}")
+  print(f"List of stations for down town: {DOWN_TOWN_STATION}")
   print("Please select a station: ")
   destination_station = input()
-  if destination_station in DOWN_TOWN:
+  if destination_station in DOWN_TOWN_STATION:
     voucher.append (f"destination station: {destination_station}")
     next_step()
   else:
     print("please select a station")
     destination_station = input()
-    while (destination_station != DOWN_TOWN for destination_station in DOWN_TOWN):  
-      if destination_station in DOWN_TOWN:
+    while (destination_station != DOWN_TOWN_STATION for destination_station in DOWN_TOWN_STATION):  
+      if destination_station in DOWN_TOWN_STATION:
         voucher.append (f"destination station: {destination_station}")
         next_step()
         break
@@ -183,17 +183,17 @@ def ticketing_system():
 
  # error handling system for if mid town is selected
  if destination_zone == "Mid town zone":
-  print(f"List of stations for midtown: {MID_TOWN}")
+  print(f"List of stations for midtown: {MID_TOWN_STATION}")
   print("Please select a station: ")
   destination_station = input()
-  if destination_station in MID_TOWN:
+  if destination_station in MID_TOWN_STATION:
     voucher.append(f"destination station: {destination_station}")
     next_step()
   else:
     print("please select a station")
     destination_station = input()
-    while (destination_station != MID_TOWN for destination_station in MID_TOWN):  
-      if destination_station in MID_TOWN:
+    while (destination_station != MID_TOWN_STATION for destination_station in MID_TOWN_STATION):  
+      if destination_station in MID_TOWN_STATION:
         voucher.append(f"destination station: {destination_station}")
         next_step()
         break
@@ -203,17 +203,17 @@ def ticketing_system():
 
  # error handling for if central is selected
  if destination_zone == "Central zone":
-  print(f"List of stations for {CENTRAL}")
+  print(f"List of stations for {CENTRAL_STATION}")
   print("Please select a station: ")
   destination_station = input()
-  if destination_station in CENTRAL:
+  if destination_station in CENTRAL_STATION:
     voucher.append(f"destination station: {destination_station}")
     next_step()
   else:
     print("please select a station")
     destination_station = input()
-    while (destination_station != CENTRAL for destination_station in CENTRAL):  
-      if destination_station in CENTRAL:
+    while (destination_station != CENTRAL_STATION for destination_station in CENTRAL_STATION):  
+      if destination_station in CENTRAL_STATION:
         voucher.append(f"destination station: {destination_station}")
         next_step()
         break
