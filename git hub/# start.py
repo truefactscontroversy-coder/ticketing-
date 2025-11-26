@@ -38,18 +38,7 @@ def ticketing_system():
  your_location = input()
  
  #error handling function for departure zone
- def zone_check():
-   printed_zones()
-   print("Please select a vaild zone") 
-   location = input()
-   if (location == "Down town zone" or 
-       location == "Mid town zone" or 
-       location == "Central zone"): 
-      current_location = location
-      print(current_location)
-      return zone_check()
-   else:
-      zone_check()
+
        
        
  def next_step():
@@ -67,9 +56,21 @@ def ticketing_system():
      your_location == "Central zone"):
      voucher.append(F"Departure zone: {your_location}")
  else: 
-    zone_check()
-    print(zone_check)
-    voucher.append (F"Departure zone: {your_location}")
+      printed_zones()
+      print("Please select a vaild zone") 
+      location = input()
+      while (location != "Down town zone" or 
+         location != "Mid town zone" or 
+         location != "Central zone"):
+       if (location == "Down town zone" or 
+          location == "Mid town zone" or 
+          location == "Central zone"):
+         voucher.append (F"Departure zone: {location}")
+         print("new page loading") 
+       else:
+         printed_zones()
+         print("Please select a vaild zone") 
+         location = input()
  
     
 
@@ -116,9 +117,21 @@ def ticketing_system():
      voucher.append(F"Destination zone: {destination_zone}")
      print(destination_zone) 
  else:
-     destination_zone = zone_check()
-     print(destination_zone)
-     voucher.append(F"Destination zone: {destination_zone}")
+     printed_zones()
+     print("Please select a vaild zone") 
+     location = input()
+     while (location != "Down town zone" or 
+         location != "Mid town zone" or 
+         location != "Central zone"):
+       if (location == "Down town zone" or 
+          location == "Mid town zone" or 
+          location == "Central zone"):
+         voucher.append (F"Departure zone: {location}")
+         print("new page loading") 
+       else:
+         printed_zones()
+         print("Please select a vaild zone") 
+         location = input()
  
   # calculation of zones traveled through    
  
