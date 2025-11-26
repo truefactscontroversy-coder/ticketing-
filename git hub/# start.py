@@ -47,10 +47,9 @@ def ticketing_system():
        location == "Central zone"): 
       current_location = location
       print(current_location)
-      return current_location
-   else:
       return zone_check()
- 
+   else:
+      zone_check()
        
        
  def next_step():
@@ -67,12 +66,11 @@ def ticketing_system():
      your_location == "Mid town zone" or 
      your_location == "Central zone"):
      voucher.append(F"Departure zone: {your_location}")
-     next_step()
  else: 
     zone_check()
     print(zone_check)
     voucher.append (F"Departure zone: {your_location}")
-    next_step()
+ 
     
 
  # end of add departure unit
