@@ -67,6 +67,7 @@ def ticketing_system():
           location == "Central zone"):
          voucher.append (F"Departure zone: {location}")
          print("new page loading") 
+         break
        else:
          printed_zones()
          print("Please select a vaild zone") 
@@ -128,6 +129,7 @@ def ticketing_system():
           location == "Central zone"):
          voucher.append (F"Departure zone: {location}")
          print("new page loading") 
+         break
        else:
          printed_zones()
          print("Please select a vaild zone") 
