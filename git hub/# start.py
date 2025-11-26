@@ -10,7 +10,7 @@ def ticketing_system():
   print("please select: start voucher")
   start_now = input()
   if start_now == "start voucher":
-   return 0
+   return 
   else:
     start_voucher_check()
  
@@ -49,7 +49,7 @@ def ticketing_system():
       print(current_location)
       return current_location
    else:
-      zone_check()
+      return zone_check()
  
        
        
@@ -63,8 +63,8 @@ def ticketing_system():
   voucher.append(F"Departure zone: {your_location}")
   print("new page loading") 
  else: 
-    current = zone_check()
-    print(current)
+    zone_check()
+    print(zone_check)
     voucher.append (F"Departure zone: {your_location}")
     print("New page loading")
 
