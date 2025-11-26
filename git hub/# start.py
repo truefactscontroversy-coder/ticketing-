@@ -334,7 +334,7 @@ def ticketing_system():
  total_cost = Adult + Child + Student + Elderly
  voucher.append (f"Total cost of trip: {total_cost}")
 
- print(voucher)
+
  # end of passenger calculation unit
  # error handling for passenger calculation unit: added 
  
