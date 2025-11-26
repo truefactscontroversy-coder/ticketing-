@@ -45,6 +45,7 @@ def ticketing_system():
    if (location == "Down town zone" or 
        location == "Mid town zone" or 
        location == "Central zone"): 
+       location = location
        return location
    else:
       zone_check()
