@@ -67,7 +67,7 @@ def ticketing_system():
 
  # end of add departure unit
 
-
+ print(voucher)
  # start of add destination unit
  # problems not sure if the calculations are correct: fixed 
 
@@ -130,7 +130,7 @@ def ticketing_system():
        print("New page loading")
  
  #end of add destination unit
-     
+ print(voucher)
  # start of add destination station unit
 
 
@@ -201,7 +201,7 @@ def ticketing_system():
 
  
 
-
+ print(voucher)
  
 
  # start of add passenger unit
@@ -303,7 +303,7 @@ def ticketing_system():
  total_cost = Adult + Child + Student + Elderly
  voucher.append (f"Total cost of trip: {total_cost}")
 
- 
+ print(voucher)
  # end of passenger calculation unit
  # error handling for passenger calculation unit: added 
  
