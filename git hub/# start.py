@@ -257,22 +257,22 @@ def ticketing_system():
    Elderly = int(input())
    return Elderly
   
- Adult = passenger_catagory_adult()
- Child = passenger_catagory_child()
- Student = passenger_catagory_student()
- Elderly = passenger_catagory_elderly()
- total_passenger = Adult + Child + Student + Elderly
+ Adult_cost = passenger_catagory_adult()
+ Child_cost = passenger_catagory_child()
+ Student_cost = passenger_catagory_student()
+ Elderly_cost = passenger_catagory_elderly()
+ total_passenger = Adult_cost + Child_cost + Student_cost + Elderly_cost
 
  if (total_passenger != 0): 
   voucher.append (f"Total number of passengers: {total_passenger}")
   next_step()
  else: 
    print("please add at least one passenger")
-   Adult = passenger_catagory_adult()
-   Child = passenger_catagory_child()
-   Student = passenger_catagory_student()
-   Elderly = passenger_catagory_elderly()
-   total_passenger = Adult + Child + Student + Elderly
+   Adult_cost = passenger_catagory_adult()
+   Child_cost = passenger_catagory_child()
+   Student_cost = passenger_catagory_student()
+   Elderly_cost = passenger_catagory_elderly()
+   total_passenger = Adult_cost + Child_cost + Student_cost + Elderly_cost
    while total_passenger == 0:
     if (total_passenger != 0): 
      voucher.append(f"Total number of passengers: {total_passenger}")
@@ -280,11 +280,11 @@ def ticketing_system():
      break
     else:
      print("please add at least one passenger")
-     Adult = passenger_catagory_adult()
-     Child = passenger_catagory_child()
-     Student = passenger_catagory_student()
-     Elderly = passenger_catagory_elderly()
-     total_passenger = Adult + Child + Student + Elderly
+     Adult_cost = passenger_catagory_adult()
+     Child_cost = passenger_catagory_child()
+     Student_cost = passenger_catagory_student()
+     Elderly_cost = passenger_catagory_elderly()
+     total_passenger = Adult_cost + Child_cost + Student_cost + Elderly_cost
   
  
 
@@ -295,43 +295,43 @@ def ticketing_system():
  # 0 need to figure this out!!!: fixed) 
 
  # for adult
- if Adult != 0:
-  Adult *= 21.05 
-  Adult *= zone_num
-  voucher.append (f"Total Adult cost: {Adult}")
- elif Adult == 0:
+ if Adult_cost != 0:
+  Adult_cost *= 21.05 
+  Adult_cost *= zone_num
+  voucher.append (f"Total Adult cost: {Adult_cost}")
+ elif Adult_cost == 0:
   voucher.append (f"Total Adult cost: {0}")
  
  
  # for child
- if Child != 0:
-  Child *= 14.10
-  Child *= zone_num
-  voucher.append (f"Total Child cost: {Child}")   
- elif Child == 0 :
+ if Child_cost != 0:
+  Child_cost *= 14.10
+  Child_cost *= zone_num
+  voucher.append (f"Total Child cost: {Child_cost}")   
+ elif Child_cost == 0 :
   voucher.append(f"Total Child cost: {0}")
 
 
  # for student
- if Student != 0:
-  Student *= 17.50
-  Student *= zone_num
-  voucher.append (f"Total Student cost: {Student}")
- elif Student == 0:
+ if Student_cost != 0:
+  Student_cost *= 17.50
+  Student_cost *= zone_num
+  voucher.append (f"Total Student cost: {Student_cost}")
+ elif Student_cost == 0:
   voucher.append(f"Total Student cost: {0}")
 
 
 
  # For elderly 
- if Elderly != 0:
-  Elderly *= 10.25
-  Elderly *= zone_num
-  voucher.append (f"Total Elderly cost: {Elderly}")
- elif Elderly == 0 :
+ if Elderly_cost != 0:
+  Elderly_cost *= 10.25
+  Elderly_cost *= zone_num
+  voucher.append (f"Total Elderly cost: {Elderly_cost}")
+ elif Elderly_cost == 0 :
   voucher.append(f"Total Elderly cost: {0}")
 
 
- total_cost = Adult + Child + Student + Elderly
+ total_cost = Adult_cost + Child_cost + Student_cost + Elderly_cost
  voucher.append (f"Total cost of trip: {total_cost}")
 
 
