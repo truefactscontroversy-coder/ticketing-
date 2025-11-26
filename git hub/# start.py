@@ -58,20 +58,20 @@ def ticketing_system():
  else: 
       printed_zones()
       print("Please select a vaild zone") 
-      location = input()
-      while (location != "Down town zone" or 
-         location != "Mid town zone" or 
-         location != "Central zone"):
-       if (location == "Down town zone" or 
-          location == "Mid town zone" or 
-          location == "Central zone"):
-         voucher.append (F"Departure zone: {location}")
+      your_location = input()
+      while (your_location != "Down town zone" or 
+         your_location != "Mid town zone" or 
+         your_location != "Central zone"):
+       if (your_location == "Down town zone" or 
+          your_location == "Mid town zone" or 
+          your_location == "Central zone"):
+         voucher.append (F"Departure zone: {your_location}")
          print("new page loading") 
          break
        else:
          printed_zones()
          print("Please select a vaild zone") 
-         location = input()
+         destination_zone = input()
  
     
 
@@ -120,20 +120,20 @@ def ticketing_system():
  else:
      printed_zones()
      print("Please select a vaild zone") 
-     location = input()
-     while (location != "Down town zone" or 
-         location != "Mid town zone" or 
-         location != "Central zone"):
-       if (location == "Down town zone" or 
-          location == "Mid town zone" or 
-          location == "Central zone"):
-         voucher.append (F"Departure zone: {location}")
+     destination_zone = input()
+     while (destination_zone != "Down town zone" or 
+         destination_zone != "Mid town zone" or 
+         destination_zone != "Central zone"):
+       if (destination_zone == "Down town zone" or 
+          destination_zone == "Mid town zone" or 
+          destination_zone == "Central zone"):
+         voucher.append (F"Departure zone: {destination_zone}")
          print("new page loading") 
          break
        else:
          printed_zones()
          print("Please select a vaild zone") 
-         location = input()
+         destination_zone = input()
  
   # calculation of zones traveled through    
  
@@ -348,27 +348,31 @@ def ticketing_system():
  # start of restart or end unit
  
  # function for error handling of restart or end input
- def restart_or_end():
-   print("Please select: 'start a new voucher' or 'end process'")
-   restart_end = input()
-   if (restart_end == "start a new voucher" or 
-       restart_end == "end process"):
-       user_choice = restart_end
-       return user_choice
-   else:
-        restart_or_end()
+ 
        
 
  print(
    "Type 'start a new voucher' to start a new voucher "
    "or 'end process' to end voucher process")
- restart_end = restart_or_end()
+ restart_end = input()
 
  if restart_end == "end process":
   print("new page loading")
   print("Thank you for using the ticketing system")
  elif restart_end == "start a new voucher": 
   ticketing_system()
+ else:
+    print("please select: start a new voucher or end process")
+    restart_end = input()
+    while (restart_end != "start a new voucher" or 
+        restart_end != "end process"):
+      if restart_end == "end process":
+        print("new page loading")
+        print("Thank you for using the ticketing system")
+        break
+      elif restart_end == "start a new voucher": 
+        ticketing_system()
+        break
 
    
  
