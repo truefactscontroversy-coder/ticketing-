@@ -163,8 +163,6 @@ def ticketing_system():
     voucher.append (f"destination station: {destination_station}")
     next_step()
   else:
-    print("please select a station")
-    destination_station = input()
     while (destination_station != DOWN_TOWN_STATION for destination_station in DOWN_TOWN_STATION):  
       if destination_station in DOWN_TOWN_STATION:
         voucher.append (f"destination station: {destination_station}")
