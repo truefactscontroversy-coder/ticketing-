@@ -1,7 +1,7 @@
 def ticketing_system():
  # start of start unit
  # message to user
- print("Welcome to the ticketing " 
+ print("Welcome to the CTA ticketing " 
       "system please select: start voucher")
  start_now = input()
 
@@ -56,10 +56,7 @@ def ticketing_system():
      your_location == "Central zone"):
      voucher.append(F"Departure zone: {your_location}")
      next_step()
- else: 
-      print(ZONES)
-      print("Please select a vaild zone") 
-      your_location = input()
+ else:
       while (your_location != "Down town zone" or 
          your_location != "Mid town zone" or 
          your_location != "Central zone"):
