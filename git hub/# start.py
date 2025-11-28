@@ -115,9 +115,6 @@ def ticketing_system():
      destination_zone == "Central zone"):
      voucher.append(F"Destination zone: {destination_zone}") 
  else:
-     print(ZONES)
-     print("Please select a vaild zone") 
-     destination_zone = input()
      while (destination_zone != "Down town zone" or 
          destination_zone != "Mid town zone" or 
          destination_zone != "Central zone"):
