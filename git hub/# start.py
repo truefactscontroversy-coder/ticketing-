@@ -277,7 +277,7 @@ def ticketing_system():
  # 0 need to figure this out!!!: fixed) 
 
  # for adult
- if adult_cost != 0:
+ if adult_cost >= 1:
   adult_cost *= 2105 
   adult_cost *= zone_num
   voucher.append (f"Total Adult cost in cents: {adult_cost}")
@@ -295,7 +295,7 @@ def ticketing_system():
 
 
  # for student
- if Student_cost != 0:
+ if Student_cost >= 1:
   Student_cost *= 1750
   Student_cost *= zone_num
   voucher.append (f"Total Student cost in cents: {Student_cost}")
@@ -305,7 +305,7 @@ def ticketing_system():
 
 
  # For elderly 
- if elderly_cost != 0:
+ if elderly_cost >= 1:
   elderly_cost *= 1025
   elderly_cost *= zone_num
   voucher.append (f"Total Elderly cost in cents: {elderly_cost}")
