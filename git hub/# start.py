@@ -28,7 +28,7 @@ def ticketing_system():
  # function to repeatedly print zones
  
  ZONES = ["Down town zone", "Mid town zone", "Central zone"]
- print(ZONES) 
+ 
 
 
  #initial user input for departure zone
@@ -78,7 +78,7 @@ def ticketing_system():
 
  # end of add departure unit
 
- print(voucher)
+ 
  # start of add destination unit
  # problems not sure if the calculations are correct: fixed 
 
@@ -149,7 +149,7 @@ def ticketing_system():
        destination_zone == "Down town zone"):
        zone_num = 3
        next_step()
- elif your_location == "Mid town zone" :
+ else:
        zone_num = 2 
        next_step()
  
