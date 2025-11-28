@@ -214,7 +214,6 @@ def ticketing_system():
 
  # start of add passenger unit
 
- # problems can't add user input to an already defined variable?: fixed 
  # initial message to user
  print("cost of one zone is automatically added to total cost")
  print ("cost will double for two zones and triple for three zones")
@@ -229,20 +228,28 @@ def ticketing_system():
 
  # user input for passenger catagory
  def passenger_catagory_adult():
-  print("Adult : -1 - +1 ")
-  Adult = int(input())
-  return Adult
+   print("Adult : add number of passengers")
+   Adult = int(input())
+   if Adult <= 0:
+     Adult = 0
+   return Adult
  def passenger_catagory_child():
-  print("Child: -1 - +1 ")
-  Child = int(input())
-  return Child
+   print("Child: add number of passengers")
+   Child = int(input())
+   if Child <= 0:
+     Child = 0
+   return Child
  def passenger_catagory_student():
-   print("Student: -1 - +1 ")
+   print("Student: add number of passengers")
    Student = int(input())
+   if Student <= 0:
+     Student = 0
    return Student
  def passenger_catagory_elderly():
-   print("Elderly: -1 - +1 ")
+   print("Elderly: add number of passengers")
    Elderly = int(input())
+   if Elderly <= 0:
+     Elderly = 0
    return Elderly
   
  adult_cost = passenger_catagory_adult()
@@ -267,59 +274,31 @@ def ticketing_system():
      Student_cost = passenger_catagory_student()
      elderly_cost = passenger_catagory_elderly()
      total_passenger = adult_cost + Child_cost + Student_cost + elderly_cost
-  
- 
 
  # end of add passenger unit
  
  # start of passenger calculation unit 
- # for adult (there is something in the variable if there is a 
- # 0 need to figure this out!!!: fixed) 
-
- # for adult
- if adult_cost >= 1:
-  adult_cost *= 2105 
-  adult_cost *= zone_num
-  voucher.append (f"Total Adult cost in cents: {adult_cost}")
- elif adult_cost <= 0:
-  voucher.append (f"Total Adult cost in cents: {0}")
  
+ adult_cost *= 2105 
+ adult_cost *= zone_num
+ voucher.append (f"Total Adult cost in cents: {adult_cost}")
+
+ Child_cost *= 1410
+ Child_cost *= zone_num
+ voucher.append (f"Total Child cost in cents: {Child_cost}")   
  
- # for child
- if Child_cost != 0:
-  Child_cost *= 1410
-  Child_cost *= zone_num
-  voucher.append (f"Total Child cost in cents: {Child_cost}")   
- elif Child_cost <= 0 :
-  voucher.append(f"Total Child cost in cents: {0}")
-
-
- # for student
- if Student_cost >= 1:
-  Student_cost *= 1750
-  Student_cost *= zone_num
-  voucher.append (f"Total Student cost in cents: {Student_cost}")
- elif Student_cost <= 0:
-  voucher.append(f"Total Student cost in cents: {0}")
-
-
-
- # For elderly 
- if elderly_cost >= 1:
-  elderly_cost *= 1025
-  elderly_cost *= zone_num
-  voucher.append (f"Total Elderly cost in cents: {elderly_cost}")
- elif elderly_cost <= 0 :
-  voucher.append(f"Total Elderly cost in cents: {0}")
-
+ Student_cost *= zone_num
+ voucher.append (f"Total Student cost in cents: {Student_cost}")
+ 
+ elderly_cost *= 1025
+ elderly_cost *= zone_num
+ voucher.append (f"Total Elderly cost in cents: {elderly_cost}")
 
  total_cost = adult_cost + Child_cost + Student_cost + elderly_cost
  voucher.append (f"Total cost of trip in cents: {total_cost}")
 
 
  # end of passenger calculation unit
- # error handling for passenger calculation unit: added 
- 
 
  # start of voucher print unit
  # subtraction of zone to comply with required output
@@ -335,15 +314,12 @@ def ticketing_system():
  
  # start of restart or end unit
  
- # function for error handling of restart or end input
- 
-       
-
  print(
    "Type 'start a new voucher' to start a new voucher "
    "or 'end process' to end voucher process")
  restart_end = input()
 
+ # function for error handling of restart or end input
  while (restart_end != "start a new voucher" or 
         restart_end != "end process"):
       if restart_end == "end process":
@@ -362,11 +338,6 @@ def ticketing_system():
   print("Thank you for using the ticketing system")
  elif restart_end == "start a new voucher": 
   ticketing_system()
-
-   
-
-   
- 
 
 ticketing_system()
 # end of project
