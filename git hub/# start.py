@@ -343,16 +343,8 @@ def ticketing_system():
    "Type 'start a new voucher' to start a new voucher "
    "or 'end process' to end voucher process")
  restart_end = input()
-
- if restart_end == "end process":
-  print("new page loading")
-  print("Thank you for using the ticketing system")
- elif restart_end == "start a new voucher": 
-  ticketing_system()
- else:
-    print("please select: start a new voucher or end process")
-    restart_end = input()
-    while (restart_end != "start a new voucher" or 
+ 
+ while (restart_end != "start a new voucher" or 
         restart_end != "end process"):
       if restart_end == "end process":
         print("new page loading")
@@ -364,6 +356,14 @@ def ticketing_system():
       else: 
        print("please select: start a new voucher or end process")
        restart_end = input()
+
+ if restart_end == "end process":
+  print("new page loading")
+  print("Thank you for using the ticketing system")
+ elif restart_end == "start a new voucher": 
+  ticketing_system()
+
+   
 
    
  
