@@ -26,14 +26,14 @@ def ticketing_system():
 
  # start of add departure unit 
  # function to repeatedly print zones
- def printed_zones():
-  ZONES = ["Down town zone", "Mid town zone", "Central zone"]
-  print(ZONES) 
+ 
+ ZONES = ["Down town zone", "Mid town zone", "Central zone"]
+ print(ZONES) 
 
 
  #initial user input for departure zone
 
- printed_zones()
+ print(ZONES)
  print("Please select a starting zone: ") 
  your_location = input()
  
@@ -57,7 +57,7 @@ def ticketing_system():
      voucher.append(F"Departure zone: {your_location}")
      next_step()
  else: 
-      printed_zones()
+      print(ZONES)
       print("Please select a vaild zone") 
       your_location = input()
       while (your_location != "Down town zone" or 
@@ -70,7 +70,7 @@ def ticketing_system():
          next_step()
          break
        else:
-         printed_zones()
+         print(ZONES)
          print("Please select a vaild zone") 
          your_location = input()
  
@@ -103,7 +103,7 @@ def ticketing_system():
  print(f"Down town zone stations: {DOWN_TOWN_STATION}")
  print(f"Mid town zone stations: {MID_TOWN_STATION}")
  print(f"Central zone stations: {CENTRAL_STATION}")
- printed_zones()
+ print(ZONES)
  print("Please select a destinationn zone: ")
 
 
@@ -118,7 +118,7 @@ def ticketing_system():
      destination_zone == "Central zone"):
      voucher.append(F"Destination zone: {destination_zone}") 
  else:
-     printed_zones()
+     print(ZONES)
      print("Please select a vaild zone") 
      destination_zone = input()
      while (destination_zone != "Down town zone" or 
@@ -130,7 +130,7 @@ def ticketing_system():
          voucher.append (F"Departure zone: {destination_zone}")
          break
        else:
-         printed_zones()
+         print(ZONES)
          print("Please select a vaild zone") 
          destination_zone = input()
  
@@ -233,10 +233,10 @@ def ticketing_system():
  print("catagory selction and add buttons")
  
  print("price page")
- print("Adult: $21.05 per zone")
- print("Child: $14.10 per zone")
- print("Student: $17.50 per zone")
- print("Elderly: $10.25 per zone")
+ print("Adult: 2105 cents per zone")
+ print("Child: 1410 cents per zone")
+ print("Student: 1750 cents per zone")
+ print("Elderly: $1025 cents per zone")
 
 
  # user input for passenger catagory
@@ -296,43 +296,43 @@ def ticketing_system():
 
  # for adult
  if adult_cost != 0:
-  adult_cost *= 21.05 
+  adult_cost *= 2105 
   adult_cost *= zone_num
-  voucher.append (f"Total Adult cost: {adult_cost}")
+  voucher.append (f"Total Adult cost in cents: {adult_cost}")
  elif adult_cost == 0:
-  voucher.append (f"Total Adult cost: {0}")
+  voucher.append (f"Total Adult cost in cents: {0}")
  
  
  # for child
  if Child_cost != 0:
-  Child_cost *= 14.10
+  Child_cost *= 1410
   Child_cost *= zone_num
-  voucher.append (f"Total Child cost: {Child_cost}")   
+  voucher.append (f"Total Child cost in cents: {Child_cost}")   
  elif Child_cost == 0 :
-  voucher.append(f"Total Child cost: {0}")
+  voucher.append(f"Total Child cost in cents: {0}")
 
 
  # for student
  if Student_cost != 0:
-  Student_cost *= 17.50
+  Student_cost *= 1750
   Student_cost *= zone_num
-  voucher.append (f"Total Student cost: {Student_cost}")
+  voucher.append (f"Total Student cost in cents: {Student_cost}")
  elif Student_cost == 0:
-  voucher.append(f"Total Student cost: {0}")
+  voucher.append(f"Total Student cost in cents: {0}")
 
 
 
  # For elderly 
  if elderly_cost != 0:
-  elderly_cost *= 10.25
+  elderly_cost *= 1025
   elderly_cost *= zone_num
-  voucher.append (f"Total Elderly cost: {elderly_cost}")
+  voucher.append (f"Total Elderly cost in cents: {elderly_cost}")
  elif elderly_cost == 0 :
-  voucher.append(f"Total Elderly cost: {0}")
+  voucher.append(f"Total Elderly cost in cents: {0}")
 
 
  total_cost = adult_cost + Child_cost + Student_cost + elderly_cost
- voucher.append (f"Total cost of trip: {total_cost}")
+ voucher.append (f"Total cost of trip in cents: {total_cost}")
 
 
  # end of passenger calculation unit
