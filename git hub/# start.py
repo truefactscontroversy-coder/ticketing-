@@ -281,7 +281,7 @@ def ticketing_system():
   adult_cost *= 2105 
   adult_cost *= zone_num
   voucher.append (f"Total Adult cost in cents: {adult_cost}")
- elif adult_cost == 0:
+ elif adult_cost <= 0:
   voucher.append (f"Total Adult cost in cents: {0}")
  
  
@@ -290,7 +290,7 @@ def ticketing_system():
   Child_cost *= 1410
   Child_cost *= zone_num
   voucher.append (f"Total Child cost in cents: {Child_cost}")   
- elif Child_cost == 0 :
+ elif Child_cost <= 0 :
   voucher.append(f"Total Child cost in cents: {0}")
 
 
@@ -299,7 +299,7 @@ def ticketing_system():
   Student_cost *= 1750
   Student_cost *= zone_num
   voucher.append (f"Total Student cost in cents: {Student_cost}")
- elif Student_cost == 0:
+ elif Student_cost <= 0:
   voucher.append(f"Total Student cost in cents: {0}")
 
 
@@ -309,7 +309,7 @@ def ticketing_system():
   elderly_cost *= 1025
   elderly_cost *= zone_num
   voucher.append (f"Total Elderly cost in cents: {elderly_cost}")
- elif elderly_cost == 0 :
+ elif elderly_cost <= 0 :
   voucher.append(f"Total Elderly cost in cents: {0}")
 
 
@@ -343,7 +343,7 @@ def ticketing_system():
    "Type 'start a new voucher' to start a new voucher "
    "or 'end process' to end voucher process")
  restart_end = input()
- 
+
  while (restart_end != "start a new voucher" or 
         restart_end != "end process"):
       if restart_end == "end process":
