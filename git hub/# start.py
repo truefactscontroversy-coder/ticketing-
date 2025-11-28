@@ -124,7 +124,7 @@ def ticketing_system():
        if (destination_zone == "Down town zone" or 
           destination_zone == "Mid town zone" or 
           destination_zone == "Central zone"):
-         voucher.append (F"Departure zone: {destination_zone}")
+         voucher.append (F"Destination zone: {destination_zone}")
          break
        else:
          print(ZONES)
